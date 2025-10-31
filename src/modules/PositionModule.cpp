@@ -128,8 +128,8 @@ void PositionModule::trySetRtc(meshtastic_Position p, bool isLocal, bool forceUp
         return;
     }
     if (!isLocal && p.location_source < meshtastic_Position_LocSource_LOC_INTERNAL) {
-        LOG_DEBUG("Ignore time from mesh because it has a unknown or manual source");
-        return;
+        LOG_DEBUG("!!!! USED TO IGNORE, NOW WE JUST ROLLING WITH IT BABYYYYYYY");
+        // return;
     }
     struct timeval tv;
     uint32_t secs = p.time;
